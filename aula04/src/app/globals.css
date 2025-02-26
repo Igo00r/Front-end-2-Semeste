@@ -1,0 +1,17 @@
+header{
+  width: 100%;
+  height: 100px;
+  background-color: aqua;
+}
+
+.menu{
+  list-style-type: none;
+  float: right;
+}
+.menu li{
+  display: inline-table;
+  padding: 10px 20px;
+}
+.menu li a{
+  text-decoration: none;
+}
