@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="frmcontarPalavra">
+        <textarea id="texto" placeholder="Digite a sua frase aqui..." rows="10" cols="70"></textarea>
+    </form>
+    <p>Quantidade de palavras: <span id="contador">0</span></p>
+    <script>
+        function contarPalavras(frase) {
+            let palavras = frase.trim().split(/\s+/); //essa expressão depois do split faz com que cada palavra seja considerada independente da quantidade de espaços entre cada uma
+
+            return frase.trim() === "" ? 0 : palavras.length;
+        }
+
+        document.getElementById('texto').addEventListener("input", function () {
+            let texto = this.value;
+            let totalPalavras = contarPalavras(texto);
+            document.getElementById('contador').innerText = totalPalavras
+        })
+    </script>
+</body>
+
+</html>
